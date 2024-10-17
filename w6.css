@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 20px; /* Added 'px' */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lightgray;
+}
+
+header {
+    background-color: lightcoral;
+    color: blue;
+}
+
+.btn {
+    background-color: white;
+    color: coral;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: coral;
+    color: white;
+}
+
+.gradient-box {
+    width: 200px;
+    height: 150px;
+    background: linear-gradient(to right, red, blue);
+    border-radius: 10px;
+}
+
+.animated-box { /* Corrected class name */
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    border-radius: 50%;
+    margin: 0 auto; 
+    animation: bounce 2s infinite;
+}
+
+/* let's define what bounce means */
+@keyframes bounce{
+    0%, 20%, 50%, 80%, 100%{
+        transform: translateY(0); /* do not move at these percentages */
+    }
+    40%{
+        transform: translateY(-3opx); /* move by 30 pixels at 40% */
+    }
+    60%{
+        transform: translateY(-15px); /* move by 15 pixels at 60% */
+    }
+}
+
+.features{
+    text-align: center;
+    max-width: 500px;
+    display: flex;
+    padding: 10px;
+}
+
+.feature{
+    padding: 5px;
+    max-width: 200px;
+}
+
+/* thee CSS styles will overwrite any previous styles when the screen size is smaller than 600px */
+@media (max-width: 600px){
+    .features{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature{
+        max-width: none;
+        width: 80%;
+    }
+}
